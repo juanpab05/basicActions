@@ -1,11 +1,16 @@
 {
   "name": "node-tests-students",
   "private": true,
+  "type": "module",
   "scripts": {
-    "test": "jest --runInBand"
+    "test": "jest --runInBand",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
+    "@eslint/js": "^9.38.0",
+    "eslint": "^9.38.0",
+    "globals": "^16.4.0",
     "jest": "^29"
   }
 }
-

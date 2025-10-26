@@ -1,4 +1,3 @@
-const { describe, test, expect } = require('@jest/globals');
 const { sumOfArrays, FizzBuzz, vaidateEmail } = require('../src/level2');
 
 describe('David - Level 2 - Logic and conditions', () => {

@@ -1,4 +1,3 @@
-const { describe, test, expect } = require('@jest/globals');
 const { countWordsArray, invertArray, avgArray } = require('../src/level1');
 
 describe('David - Level 1 - Basic Functions', () => {
