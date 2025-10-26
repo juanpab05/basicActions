@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "test": "jest --runInBand",
+    "test:ci": "jest --ci --runInBand --coverage",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
