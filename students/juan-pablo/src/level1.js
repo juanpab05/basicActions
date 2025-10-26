@@ -1,23 +1,23 @@
+//const unused = 42; // This variable is intentionally unused to demonstrate ESLint functionality
+
 // --- Function 1 ---
-function isPalindrome(text) {
-  if (typeof text !== 'string') throw new Error('Input must be a string');
-  const clean = text.toLowerCase().replace(/\s+/g, '');
-  return clean === clean.split('').reverse().join('');
+function isEven(num) {
+  if (typeof num !== 'number') throw new Error('Input must be a number');
+  return num % 2 === 0;
 }
 
 // --- Function 2 ---
-function sumArray(nums) {
+function minArray(nums) {
   if (!Array.isArray(nums)) throw new Error('Input must be an array');
-  return nums.reduce((a, b) => a + b, 0);
+  return Math.min(...nums);
 }
 
 // --- Function 3 ---
-function countVowels(text) {
-  if (typeof text !== 'string') throw new Error('Input must be a string');
-  const vowels = text.match(/[aeiou]/gi);
-  return vowels ? vowels.length : 0;
+function pythagoras(a, b) {
+  if (typeof a !== 'number' || typeof b !== 'number') throw new Error('Inputs must be numbers');
+  return Math.sqrt(a**2 + b**2);
 }
 
 // Export so Jest can use them
-module.exports = { isPalindrome, sumArray, countVowels };
+module.exports = { isEven, minArray, pythagoras };
 
