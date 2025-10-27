@@ -6,8 +6,8 @@
     "test": "jest --runInBand",
     "coverage": "jest --coverage",
     "test:ci": "jest --ci --runInBand --coverage",
-    "lint": "eslint students/s-sara/src/**/*.js students/s-sara/tests/**/*.js",
-    "lint:fix": "eslint students/s-sara/src/**/*.js students/s-sara/tests/**/*.js --fix"
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
     "@eslint/js": "^9.38.0",
