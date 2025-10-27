@@ -32,6 +32,39 @@ describe('level 3 - Algorithms and metrics', () => {
             }
         });
     });
+    test('GeneradorLaberintos: It should generate multiple labyrinths and choose the most complex', () => {
+        function encontrarLaberintoMasComplejo(cantidad = 5, tamanio = 25) {
+             let laberintoMasComplejo = null;
+              let maxComplejidad = -1;
+               console.log(`Generando ${cantidad} laberintos ${tamanio}x${tamanio}...`);
+               for (let i = 0; i < cantidad; i++) {
+                 const generador = new GeneradorLaberintos(tamanio, tamanio);
+                  generador.generarLaberinto();
+                  const complejidad = generador.medirComplejidad();
+
+                   console.log(`Laberinto ${i + 1}: ${complejidad.puntuacion.toFixed(2)} puntos`);
+                   if (complejidad.puntuacion > maxComplejidad) {
+                    maxComplejidad = complejidad.puntuacion;
+                    laberintoMasComplejo = {
+                         generador: generador,
+                          complejidad: complejidad,
+                           numero: i + 1
+                    };
+                   }
+               }
+                console.log(`\n LABERINTO MÁS COMPLEJO: #${laberintoMasComplejo.numero}`);
+                console.log(`Puntuación: ${laberintoMasComplejo.complejidad.puntuacion.toFixed(2)}`);
+                console.log(`Intersecciones: ${laberintoMasComplejo.complejidad.metricas.intersecciones}`);
+                console.log(`Dead ends: ${laberintoMasComplejo.complejidad.metricas.deadEnds}`);
+
+                 return laberintoMasComplejo;
+
+        }
+        // Encontrar el laberinto más complejo entre 5 generados
+        const masComplejo = encontrarLaberintoMasComplejo(5, 25);
+        
+
+    });
 });
 
 
