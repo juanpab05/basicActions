@@ -1,4 +1,4 @@
-const {generarContraseñaSegura, mezclarString, calcularFortaleza } = require('../src/level2');
+const {generarContraseñaSegura } = require('../src/level2');
 
 describe('Level 2 – Logic and conditions', () => {
     //---------------------
@@ -19,18 +19,14 @@ describe('Level 2 – Logic and conditions', () => {
         console.log(contraseña3);
     });
     test('generarContraseñaSegura: Should catch an error when you input an invalid password', () => {
-        try{
-            const contraseñaInvalida = generarContraseñaSegura({
+        expect(() => {
+            generarContraseñaSegura({
                 incluirMayusculas: false,
                 incluirMinusculas: false, 
                 incluirNumeros: false,
                 incluirSimbolos: false,
-
             });
-
-        }catch(error){
-            console.error('Error:', error.message);
-        }
+        }).toThrow();
     });
     test('generarContraseñaSegura: Should create a password with only numbers', () => {
         const contraseña5 = generarContraseñaSegura({
