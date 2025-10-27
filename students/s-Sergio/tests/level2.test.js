@@ -102,5 +102,16 @@ describe('Level 2 – Logic and conditions', () => {
         // Uso
         generarContraseñasParaServicios();
      });
+     test('generarContraseñaSegura: Should mix a string of words', () => {
+        const resultado = mezclarString("hola", "mundo");
+        console.log(resultado);
+     });
+     test('generarContraseñaSegura: Should generate passwords with symbols but without excluding vague characters', () => {
+        const contraseñaCompleta = generarContraseñaSegura({
+                excluirCaracteresAmbiguos: false,
+                longitud: 20
+        });
+     });
+
 
 });
