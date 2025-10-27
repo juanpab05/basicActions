@@ -1,4 +1,3 @@
-
 // --- Function 1 ---
 function reverseString(str) {
     if (typeof str !== 'string'){

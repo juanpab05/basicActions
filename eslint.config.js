@@ -12,6 +12,9 @@ export default defineConfig([
         ...globals.node,    // para permitir require, module, etc.
         ...globals.jest     // para permitir test, expect, etc.
       }
+    },
+    rules: {
+      complexity: ["warn", {max: 6}]
     }
   }
 ]);

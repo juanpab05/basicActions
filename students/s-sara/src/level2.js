@@ -1,4 +1,3 @@
-
 // --- Function 1 ---
 function countVowels(str) {
     if (typeof str !== 'string') return 0;
