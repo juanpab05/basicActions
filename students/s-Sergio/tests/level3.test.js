@@ -60,9 +60,11 @@ describe('level 3 - Algorithms and metrics', () => {
                  return laberintoMasComplejo;
 
         }
-        // Encontrar el laberinto más complejo entre 5 generados
-        const masComplejo = encontrarLaberintoMasComplejo(5, 25);
         
+        // Llamar a la función para probar la generación de laberintos
+        const masComplejo = encontrarLaberintoMasComplejo(5, 25);
+        expect(masComplejo).toBeDefined();
+        expect(masComplejo.complejidad.puntuacion).toBeGreaterThan(0);
 
     });
 });
