@@ -110,3 +110,5 @@ function calcularFortaleza(contraseña, conjuntosUsados) {
     if (puntuacion >= 2) return 'Moderada';
     return 'Débil';
 }
+
+module.exports = { generarContraseñaSegura, mezclarString, calcularFortaleza };

@@ -22,3 +22,6 @@ function generarUsuario(nombre, apellido) {
     const nombreUsuario = (nombre.slice(0, 3) + apellido.slice(0, 3)).toLowerCase();
     return `${nombreUsuario}${numeroAleatorio}`;
 }
+
+//Export so jest can use them
+module.exports = { invertirOrdenPalabras, contarLetras, generarUsuario };
