@@ -8,17 +8,17 @@ describe('Sara - Level 2 - Logic and conditions', () => {
     });
 
     test('sumMatrix correctly sums all numbers in a 2D array', () => {
-    expect(sumMatrix([[1,2],[3,4]])).toBe(10);
-    expect(sumMatrix([[1,2,'a'],[3,null]])).toBe(6);
-    expect(sumMatrix('not an array')).toBe(0);
+        expect(sumMatrix([[1,2],[3,4]])).toBe(10);
+        expect(sumMatrix([[1,2,'a'],[3,null]])).toBe(6);
+        expect(sumMatrix('not an array')).toBe(0);
     });
 
     test('isIsogram detects words with no repeating letters', () => {
-    expect(isIsogram('Machine')).toBe(true);
-    expect(isIsogram('Letter')).toBe(false);
-    expect(isIsogram('')).toBe(true);
-    expect(isIsogram('isogram')).toBe(true);
-    expect(isIsogram(123)).toBe(false);
+        expect(isIsogram('Machine')).toBe(true);
+        expect(isIsogram('Letter')).toBe(false);
+        expect(isIsogram('')).toBe(true);
+        expect(isIsogram('isogram')).toBe(true);
+        expect(isIsogram(123)).toBe(false);
     });
 
 });

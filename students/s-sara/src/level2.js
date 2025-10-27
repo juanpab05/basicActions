@@ -13,7 +13,6 @@ function countVowels(str) {
 // --- Function 2 ---
 function sumMatrix(matrix) {
     if (!Array.isArray(matrix)) return 0;
-
     let total = 0;
     for (let row of matrix) {
         if (!Array.isArray(row)) continue;
