@@ -14,7 +14,8 @@ export default defineConfig([
       }
     },
     rules: {
-      complexity: ["warn", {max: 6}]
+      complexity: ['warn', {max: 10}],
+      quotes: ['warn', 'single']
     }
   }
 ]);
