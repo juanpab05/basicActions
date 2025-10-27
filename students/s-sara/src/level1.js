@@ -23,4 +23,4 @@ function countEvenNumbers(arr) {
     return arr.filter(n => typeof n === 'number' && n % 2 === 0).length;
 }
 
-module.exports = {reverseString, maxNumber, countEvenNumbers}
+module.exports = {reverseString, maxNumber, countEvenNumbers};
