@@ -21,3 +21,4 @@ function pythagoras(a, b) {
 // Export so Jest can use them
 module.exports = { isEven, minArray, pythagoras };
 
+
